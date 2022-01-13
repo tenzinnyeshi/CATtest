@@ -42,8 +42,15 @@
 							<td>
 								<xsl:value-of select="Emp-designation"></xsl:value-of>
 							</td>
-							
-
+							<xsl:if test="Emp-age > 50">
+								<td>Associate Project Manager</td>
+									</xsl:if>
+								<xsl:if test="Emp-age > 41">
+									<td>Team Leader</td>
+								</xsl:if>
+							<xsl:if test="Emp-age < 40">
+								<td>Developer</td>
+							</xsl:if>
 						</tr>
 					</xsl:for-each>
 				</table>
